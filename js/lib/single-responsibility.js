@@ -34,3 +34,13 @@ Liker.prototype = {
 }
 
 Liker.mixin(PubSub);
+
+//var Liker = function() {
+  //$("#like").on("click", function(e) {
+    //e.preventDefault();
+
+    ////increate like
+    //$(this).html( parseInt($(this).html())+1 )
+    //$("#like_count").append("<li>" + new Date().toString()+"</li>");
+  //})
+//}
