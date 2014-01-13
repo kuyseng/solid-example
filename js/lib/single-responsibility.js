@@ -9,6 +9,15 @@ Liker.prototype = {
     this.publish("liked");
   },
 
+  bindTweet: function() {
+    var that = this;
+    this.subscribe("liked", function(){ that.tweet(); });
+  },
+
+  tweet: function() {
+    console.log("sending a tweet...")
+  },
+
   updateButtonLike: function() {
     $("#like").html(this.like);
   },
@@ -23,6 +32,11 @@ Liker.prototype = {
   },
 
   bind: function() {
+    this.bindLikeID();
+    this.bindTweet();
+  },
+
+  bindLikeID: function() {
     var that = this;
     $("#like").on("click", function(e) {
       e.preventDefault();
