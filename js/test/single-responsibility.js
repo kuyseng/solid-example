@@ -3,11 +3,12 @@ describe("Liker", function(){
   //it("likes a post", function() {
     // add html in jasmine environment in tests.html
     $("#sandbox").html("<div id='post'><button id='like'></button></div>");
-    new Liker();
+    liker = new Liker();
+    new Twitter(liker)
 
     var expectation = function() {
       expect($("#like").html()).toEqual("2");
-      //done();
+      done();
     };
 
     // register expectation to be run when element clicked.
